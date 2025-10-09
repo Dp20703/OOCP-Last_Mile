@@ -4,32 +4,33 @@ using namespace std;
 class Matrix
 {
 	int Element[3][3];
+
 public:
-	Matrix(){};
+	Matrix() {};
 	Matrix(int TempMatrix[3][3])
 	{
-		for (int i=0;i<3;i++)
-			for (int j=0;j<3;j++)
-                Element[i][j] = TempMatrix[i][j];
+		for (int i = 0; i < 3; i++)
+			for (int j = 0; j < 3; j++)
+				Element[i][j] = TempMatrix[i][j];
 	}
 	void Read()
 	{
-		for (int i=0;i<3;i++)
-			for (int j=0;j<3;j++)
-                cin >> Element[i][j];
+		for (int i = 0; i < 3; i++)
+			for (int j = 0; j < 3; j++)
+				cin >> Element[i][j];
 	}
 
-	void  operator -()
+	void operator-()
 	{
-		for (int i=0;i<3;i++)
-			for (int j=0;j<3;j++)
-                Element[i][j] = - Element[i][j];
+		for (int i = 0; i < 3; i++)
+			for (int j = 0; j < 3; j++)
+				Element[i][j] = -Element[i][j];
 	}
 	void Display()
 	{
-		for (int i=0;i<3;i++)
+		for (int i = 0; i < 3; i++)
 		{
-			for (int j=0;j<3;j++)
+			for (int j = 0; j < 3; j++)
 			{
 				cout << Element[i][j] << "  ";
 			}
@@ -39,7 +40,7 @@ public:
 };
 int main()
 {
-	int ArrayOfInt[][3]={1,2,3,4,5,6,7,8,9};
+	int ArrayOfInt[][3] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
 	Matrix M1(ArrayOfInt);
 	cout << "The First Matrix before negation is \n";
 	M1.Display();
@@ -57,5 +58,4 @@ int main()
 
 	M1.Display();
 	return 0;
-
 }
