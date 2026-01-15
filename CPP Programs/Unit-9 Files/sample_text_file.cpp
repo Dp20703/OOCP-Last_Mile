@@ -5,32 +5,41 @@ using namespace std;
 
 int main()
 {
-    string inputLine, outputLine; // simple variable for input and output value storage
-
+    // ...................WRITING.........
+    string inputLine;                  // simple variable for input value storage
     ofstream entryFile("Student.txt"); // create/open file
 
     // input code:
     cout << "Input:-" << endl;
-    while (true)
+    while (getline(cin, inputLine))
     {
-        // cin >> inputLine;
-        getline(cin, inputLine);
-        if (inputLine == "End")
+        if (inputLine == "End") // type End to exit input
             break;
-        entryFile << inputLine; // writing to entryFile
+        entryFile << inputLine << endl; // writing to entryFile
     }
     entryFile.close();
+
+    // ...................READING.........
     // output code:
     cout << "Output:";
     ifstream DisplayFile("Student.txt"); // open/read file
+    string outputLine;                   // Simple variable for output value storage
 
-    // display
-    while (!DisplayFile.eof())
+    // Display
+
+    // read word by word
+    // while (!DisplayFile.eof())
+    // {
+    //     DisplayFile >> outputLine;
+    //     cout << outputLine << endl;
+    // }
+    // DisplayFile.close();
+
+    // read line by line
+    while (getline(DisplayFile, outputLine))
     {
-        DisplayFile >> outputLine;
-        cout << outputLine << "\n";
+        cout << outputLine << endl;
     }
-    DisplayFile.close();
 
     return 0;
 }

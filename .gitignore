@@ -1,7 +1,5 @@
-.vscode/settings.json
-*.exe
-*.json
-*c
 tempCodeRunnerFile.cpp
-exam.cpp
-
+*.json
+*.exe
+*.txt
+*c
