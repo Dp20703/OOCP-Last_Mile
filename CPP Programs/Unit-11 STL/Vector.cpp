@@ -2,6 +2,7 @@
 #include <vector>
 #include <algorithm>
 using namespace std;
+
 class Student
 {
     int rollNumber;
@@ -9,26 +10,31 @@ class Student
 
 public:
     Student() {}
+
     Student(int rn, float tm)
     {
         rollNumber = rn;
         totalMarks = tm;
     }
+
     // =
     void operator=(Student TempStud)
     {
         rollNumber = TempStud.rollNumber;
         totalMarks = TempStud.totalMarks;
     }
+
     // <
     bool operator<(Student TempStud)
     {
         return (totalMarks < TempStud.totalMarks);
     }
+
     // <<
     friend ostream &operator<<(ostream &Tempout, Student TempStud);
 };
-ostream &operator<<(ostream &Tempout, Student TempStud)
+
+ostream &operator<<(ostream &Tempout, Student TempStud) 
 {
     Tempout << "\nRoll number: " << TempStud.rollNumber << " Total Marks:" << TempStud.totalMarks;
     return Tempout;
@@ -36,7 +42,7 @@ ostream &operator<<(ostream &Tempout, Student TempStud)
 
 int main()
 {
-    vector<Student> StudMarks;
+    vector <Student> StudMarks;
     float tempMarks;
     int i = 0;
     for (;;)
@@ -51,6 +57,7 @@ int main()
         ++i;
     }
     cout << "The size of StudMarks is:-" << StudMarks.size();
+
     vector<Student>::iterator index;
     sort(StudMarks.begin(), StudMarks.end());
 

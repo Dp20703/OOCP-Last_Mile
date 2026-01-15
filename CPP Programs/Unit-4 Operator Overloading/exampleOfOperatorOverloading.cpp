@@ -16,6 +16,7 @@ public:
         customerId = custId;
         balance = bal;
     }
+   
     void input()
     {
         cout << "\nEnter CustomerID: ";
@@ -43,6 +44,7 @@ public:
         }
         return temp;
     }
+    
     friend void checkCustomerId(BankAccount cust[], int n);
 };
 

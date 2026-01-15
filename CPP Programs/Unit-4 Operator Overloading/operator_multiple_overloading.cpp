@@ -24,6 +24,7 @@ public:
     {
         return BankAccount(accountNo, customerId, balance * factor);
     }
+    
     // 2️⃣ Friend function operator*
     friend BankAccount operator*(int factor, const BankAccount &obj)
     {

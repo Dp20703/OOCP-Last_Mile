@@ -23,7 +23,9 @@ public:
     void display();
     static void counts();
 };
+
 int Emp::count = 0;
+
 void Emp::input()
 {
     cout << "Enter emp_id:";
@@ -43,6 +45,7 @@ void Emp::calculateGS()
 {
     gross_salary = basic_salary + hra + da;
 }
+
 void Emp::display()
 {
     cout << "Emp_id:" << emp_id << endl;
@@ -52,10 +55,12 @@ void Emp::display()
     cout << "da:" << da << endl;
     cout << "gross_salary:" << gross_salary << endl;
 }
+
 void Emp ::counts()
 {
     cout << "Total count:" << count;
 }
+
 int main()
 {
     int n;
@@ -64,16 +69,20 @@ int main()
     cin >> n;
 
     Emp emp[n];
+
     for (int i = 0; i < n; i++)
     {
         cout << "Enter value for emp " << i + 1 << endl;
         emp[i].input();
     }
+
     for (int i = 0; i < n; i++)
     {
         cout << "Details for emp " << i + 1 << endl;
         emp[i].display();
     }
+
     Emp::counts();
+
     return 0;
 }

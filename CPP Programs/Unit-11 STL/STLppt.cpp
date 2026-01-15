@@ -56,6 +56,8 @@ int main()
 	}
 
 	cout << "The size of StudMarks is " << StudMarks.size() << endl;
+
+	
 	vector<Student>::iterator index;
 
 	sort(StudMarks.begin(), StudMarks.end());
