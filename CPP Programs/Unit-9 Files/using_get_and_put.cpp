@@ -6,7 +6,7 @@ using namespace std;
 int main()
 {
     char ch;
-
+    
     // write in file
     ofstream file("info2.txt");
     cout << "input : ";

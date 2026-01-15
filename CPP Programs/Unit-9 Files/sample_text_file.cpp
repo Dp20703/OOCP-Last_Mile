@@ -10,7 +10,7 @@ int main()
     ofstream entryFile("Student.txt"); // create/open file
 
     // input code:
-    cout << "Input:-" << endl;
+    cout << "Input:-";
     while (getline(cin, inputLine))
     {
         if (inputLine == "End") // type End to exit input
@@ -21,7 +21,7 @@ int main()
 
     // ...................READING.........
     // output code:
-    cout << "Output:";
+    cout << "Output:" << endl;
     ifstream DisplayFile("Student.txt"); // open/read file
     string outputLine;                   // Simple variable for output value storage
 
@@ -31,7 +31,7 @@ int main()
     // while (!DisplayFile.eof())
     // {
     //     DisplayFile >> outputLine;
-    //     cout << outputLine << endl;
+    //     cout << outputLine << "\n";
     // }
     // DisplayFile.close();
 
