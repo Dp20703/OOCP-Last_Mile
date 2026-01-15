@@ -40,6 +40,6 @@ int main()
     {
         cout << outputLine << endl;
     }
-
+    DisplayFile.close();
     return 0;
 }
